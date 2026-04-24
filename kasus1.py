@@ -1,4 +1,4 @@
-# bubble sort)
+# bubble sort
 tinggi = [150, 170, 155, 160, 145]
 n = len(tinggi)
 for i in range(n):
