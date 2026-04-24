@@ -1,0 +1,14 @@
+// selection sort
+$suhu = [32, 28, 30, 25, 31];
+$n = count($suhu);
+for ($i = 0; $i < $n; $i++) {
+    $idx_low = $i;
+    for ($j = $i+1; $j < $n; $j++) {
+        if ($suhu[$j] < $suhu[$idx_low]) $idx_low = $j;
+    }
+    // Melakukan satu kali pertukaran di akhir putaran
+    $temp = $suhu[$i];
+    $suhu[$i] = $suhu[$idx_low];
+    $suhu[$idx_low] = $temp;
+}
+echo "Suhu Sensor: " . implode(", ", $suhu);
