@@ -1,0 +1,13 @@
+// selection sort
+$seri = [405, 102, 308, 215, 110, 502, 333, 111, 201, 444];
+$n = count($seri);
+for ($i = 0; $i < $n; $i++) {
+    $min_idx = $i;
+    for ($j = $i + 1; $j < $n; $j++) {
+        if ($seri[$j] < $seri[$min_idx]) $min_idx = $j;
+    }
+    $temp = $seri[$i];
+    $seri[$i] = $seri[$min_idx];
+    $seri[$min_idx] = $temp;
+}
+echo "Urutan Seri: " . implode(", ", $seri);
