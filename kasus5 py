@@ -1,0 +1,11 @@
+# selection sort
+suhu = [32, 28, 30, 25, 31]
+n = len(suhu)
+for i in range(n):
+    idx_low = i
+    for j in range(i+1, n):
+        if suhu[j] < suhu[idx_low]:
+            idx_low = j
+    # Melakukan satu kali pertukaran di akhir putaran
+    suhu[i], suhu[idx_low] = suhu[idx_low], suhu[i]
+print(f"Suhu Sensor: {suhu}")
