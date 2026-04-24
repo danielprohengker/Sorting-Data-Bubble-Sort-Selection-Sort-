@@ -1,0 +1,9 @@
+# selection sort
+seri = [405, 102, 308, 215, 110, 502, 333, 111, 201, 444]
+for i in range(len(seri)):
+    min_idx = i
+    for j in range(i+1, len(seri)):
+        if seri[j] < seri[min_idx]:
+            min_idx = j
+    seri[i], seri[min_idx] = seri[min_idx], seri[i]
+print(f"Urutan Seri: {seri}")
