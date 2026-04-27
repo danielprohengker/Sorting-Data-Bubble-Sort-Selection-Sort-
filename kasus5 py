@@ -6,6 +6,5 @@ for i in range(n):
     for j in range(i+1, n):
         if suhu[j] < suhu[idx_low]:
             idx_low = j
-    # Melakukan satu kali pertukaran di akhir putaran
     suhu[i], suhu[idx_low] = suhu[idx_low], suhu[i]
 print(f"Suhu Sensor: {suhu}")
